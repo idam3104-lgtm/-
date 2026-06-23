@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยิงนกกีวี่ 🥝</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>ยิงนกกีวี่ 🥝</h1>
+            <div class="stats">
+                <div>คะแนน: <span id="score">0</span></div>
+                <div>เงิน: <span id="money">0</span> 🪙</div>
+                <div>นกที่ยิงแล้ว: <span id="birdsShot">0</span></div>
+            </div>
+        </header>
+
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div class="controls">
+            <button id="shopBtn">🛒 ร้านค้า</button>
+            <button id="questBtn">📜 เควส</button>
+        </div>
+
+        <!-- Shop Modal -->
+        <div id="shopModal" class="modal">
+            <div class="modal-content">
+                <h2>🛒 ร้านไอเทม</h2>
+                <div class="shop-items">
+                    <div class="item">
+                        <h3>เพิ่มจำนวนนก</h3>
+                        <p>ราคา: <span id="birdPrice">50</span> 🪙</p>
+                        <button id="buyBirds">ซื้อ (+นก)</button>
+                        <small>ระดับ: <span id="birdLevel">1</span></small>
+                    </div>
+                    <div class="item">
+                        <h3>คูณเงิน</h3>
+                        <p>ราคา: <span id="multiPrice">80</span> 🪙</p>
+                        <button id="buyMultiplier">ซื้อ (x<span id="currentMulti">1</span>)</button>
+                        <small>ระดับ: <span id="multiLevel">1</span></small>
+                    </div>
+                </div>
+                <button id="closeShop">ปิด</button>
+            </div>
+        </div>
+
+        <!-- Quest Modal -->
+        <div id="questModal" class="modal">
+            <div class="modal-content">
+                <h2>📜 เควสประจำวัน</h2>
+                <div id="questsList"></div>
+                <button id="closeQuest">ปิด</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            คลิกที่หน้าจอเพื่อยิงนกกีวี่ • เก็บเงินซื้อไอเทมเพื่อเพิ่มความสนุก!
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+  </html>
